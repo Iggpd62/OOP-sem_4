@@ -4,14 +4,12 @@ abstract class BaseHero implements CharacterInterface {
     protected int speed;
     protected Coordinates coordinates;
 
-    public BaseHero(String name, int health, int speed, int x, int y) {
+    protected BaseHero(String name, int health, int speed, int x, int y) {
         this.name = name;
         this.health = health;
         this.speed = speed;
         this.coordinates = new Coordinates(x, y);
     }
-
-
     public void attack() {
         System.out.println(name + " наносит удар!");
     }
@@ -32,4 +30,3 @@ abstract class BaseHero implements CharacterInterface {
         return coordinates;
     }
 }
-
